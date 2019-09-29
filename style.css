@@ -1,0 +1,320 @@
+:root{
+     --btn-bg:hsl(322, 100%, 66%);
+     --dark-color: hsl(192, 100%, 9%);
+     --grey-color: hsl(208, 11%, 55%);
+     --pale-color: hsl(193, 100%, 96%);
+}
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+/*--------------------------HEADER STYLES------------------*/
+header{
+     background-image: url(/images/bg-hero-mobile.svg);
+     background-color: var(--pale-color);
+     background-position: center top;
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 2rem 0;
+}
+
+/*Navigation Styles*/
+header nav{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+nav img{
+     width: 100%;
+     max-width: 180px;
+}
+
+nav a{
+     color: var(--dark-color);
+     background: white;
+     text-decoration: none;
+     padding: 0.5rem 1.5rem;
+     border-radius: 20px;
+     box-shadow: 0 4px 6px rgb(214, 211, 211);
+     transition: 0.3s box-shadow;
+}
+
+nav a:hover{
+     box-shadow: 0 4px 6px rgb(187, 185, 185);
+}
+
+/*CTA Section Styles*/
+.cta-first{
+     width: 80%;
+     margin: 0 auto;
+     text-align: center;
+     margin-top: 4rem;
+}
+
+.cta-first h1{
+     color: var(--dark-color);
+     font-weight: 600;
+     font-size: 2rem;
+     line-height: 1.5;
+}
+
+.cta-first p{
+     font-size: 1.2rem;
+     line-height: 1.5;
+     margin-top: 1rem;
+}
+
+.cta-btn{
+     color: white;
+     display: inline-block;
+     font-size: 0.9rem;
+     border-radius: 20px;
+     text-decoration: none;
+     letter-spacing: 1px;
+     padding: 0.8rem 3rem;
+     background: var(--btn-bg);
+     margin-top: 3rem;
+     transition: 0.3s background-color;
+}
+
+.cta-first a:hover{
+     background: rgb(202, 50, 157);
+}
+
+header .header-img img{
+     width: 80%;
+     display: block;
+     margin: 0 auto;
+     margin-top: 4.5rem;
+}
+
+/*------------------MAIN SECTION STYLES-----------------------*/
+main{
+     margin-top: 4rem;
+}
+.product-card{
+     width: 85%;
+     padding: 4.3rem 1.5rem  2.3rem;
+     margin: 0 auto 3rem;
+     text-align: center;
+     color: var(--dark-color);
+     border-radius: 20px;
+     box-shadow: 0 0 8px 3px rgba(189, 189, 189, 0.4);
+}
+
+.product-card img{
+     width: 70%;
+     margin-top: 1rem;
+     display: inline-block;
+     grid-area: "image"
+}
+
+.product-card .product-text{
+     grid-area: "product"
+}
+
+.product-card h3{
+     font-weight: 600;
+     margin-top: 3rem;
+}
+
+.product-card p{
+     width: 80%;
+     color: var(--grey-color);
+     line-height: 1.6;
+     margin: 1.2rem auto 0;
+}
+
+/*---------------Final CTA Styles----------------------*/
+.cta-last{
+     height: 30vmax;
+     width: 85%;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     border-radius: 20px;
+     box-shadow:  0 -5px 10px rgb(226, 225, 225);
+     align-items: center;
+     justify-content: space-evenly;
+     z-index: 200;
+}
+
+.cta-last h1{
+     font-size: 1.3rem;
+     margin-top: 1.2rem;
+}
+
+.cta-last a{
+     width: 55%;
+     font-size: .7rem;
+     margin-top: -0.3rem;
+     box-shadow: 0 5px 10px rgb(216, 216, 216);
+     transition: 0.3s box-shadow, transform 0.3s; 
+}
+
+.cta-last a:hover{
+     transform: translateY(-2px);
+     box-shadow: 0 5px 15px rgb(197, 194, 194);
+}
+
+/*---------------------FOOTER SECTION STYLES----------------*/
+footer{
+     color: var(--pale-color);
+     padding: 8rem 1rem 3rem;
+     background: var(--dark-color);
+     margin: -2rem;
+}
+
+.footer-container{
+     width: 80%;
+     margin: 0 auto;
+}
+
+.contact-info{
+     margin-bottom: 4rem;
+}
+
+footer .logo{
+     margin-bottom: 1.5rem;
+}
+
+footer a{
+     color: var(--pale-color);
+     text-decoration: none;
+}
+
+/* footer p:first-child{
+     align-items: stretch;
+} */
+
+footer p{
+     line-height: 1.7;
+     margin-bottom: 1.5rem;
+     display: flex;
+     align-items: center;
+}
+
+footer i{
+     padding-right: 1rem;
+}
+
+footer ul{
+     list-style: none;
+}
+
+footer li{
+     padding-bottom: 2rem;
+} 
+
+/*Social Media Icons Styles*/
+.social-icons{
+     width: 40%;
+     display: flex;
+     justify-content: space-between;
+     margin: 0 auto;
+}
+
+.social-icons i{
+     cursor: pointer;
+     padding: 1rem;
+}
+
+
+
+/*DESKTOP MEDIA QUERIES @960px*/
+@media screen and (min-width:  960px){
+     /*==============Header Styles============*/
+     header{
+          background: url("images/bg-hero-desktop.svg");
+          background-color: var(--pale-color)
+     }
+
+     header nav{
+          justify-content: space-between;
+          width: 80%;
+          margin: 0 auto;
+     }
+
+     .header-hero{
+          display: flex;
+          width: 80%;
+          margin: 0 auto;
+     }
+
+     .header-hero .cta-first{
+          text-align: left;
+     }
+
+     .header-hero .cta-first h1{
+          font-size: 1.6rem;
+          width: 80%;
+     }
+
+     .header-hero .cta-first p{
+          font-size: 1rem;
+     }
+
+     .header-hero .cta-first .cta-btn{
+          margin-top: 1rem;
+          padding: 0.8rem 2.5rem;
+     }
+
+
+     /*==========Main SECTION STYLES===========*/
+     /*Product Card Styles*/
+.product-card{
+     display: flex;
+     flex-direction: row-reverse;
+}
+
+.product-card .product-text{
+     text-align: left;
+}
+
+.product-card .product-text h3{
+     margin-left: 3.2rem;
+}
+
+.product-card:nth-child(2){
+     flex-direction: row;
+}
+
+.product-card img{
+     margin: 2rem;
+}
+
+/*=====FINAL CTA CARD STYLES=========*/
+.cta-last{
+     width: 50%;
+     height: 20vmax;
+     margin-bottom: 5rem;
+}
+
+.cta-last h1{
+     margin-top: -2rem;
+}
+
+.cta-last a{
+     margin-top:-3rem;
+}
+/*=======FOOTER STYLES=====*/
+.footer-container{
+     display: grid;
+     grid-template-columns: 1fr 400px 1fr;
+}
+
+footer .links{
+     display: flex;
+     justify-content: space-around;
+     margin: 4.2rem 1rem 0;
+}
+
+footer .social-icons{
+     margin-top: 4rem
+}
+}
